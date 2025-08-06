@@ -1,0 +1,58 @@
+You went shopping and bought 3 different items. You are given:
+The cost of each item
+The quantity of each item
+You also have a budget.
+Write a program to:
+Calculate the total bill before tax.
+Add 10% tax to get the final bill.
+Check if the final bill is within the budget or exceeds it.
+
+Input Format
+
+The first line contains two integers: cost1 quantity1
+The second line contains two integers: cost2 quantity2
+The third line contains two integers: cost3 quantity3
+The fourth line contains one integer: budget
+
+
+Output Format
+Print the total before tax and after tax (formatted to 2 decimal places), and then print:
+"Within Budget" if the final bill is less than or equal to the budget
+"Over Budget" otherwise
+Sample Input 0
+
+100 2  
+50 3  
+20 5  
+500
+Sample Output 0
+
+Total (Before Tax): 450.00  
+Total (After Tax): 495.00  
+Within Budget
+
+Code
+
+Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+        int b=sc.nextInt();
+        int c=sc.nextInt();
+        int d=sc.nextInt();
+        int e=sc.nextInt();
+        int f=sc.nextInt();
+        int get=sc.nextInt();
+        double c1=a*b;
+        double c2=c*d;
+        double c3=e*f;
+        double before=(c1+c2+c3);
+        double after=before+(before*0.10);
+        System.out.printf("Total (Before Tax): " + "%.2f\n",before); 
+        System.out.printf("Total (After Tax): " + "%.2f\n",after);
+        if(before<=get){
+            System.out.println("Within Budget");
+        }
+        else{
+           
+            System.out.println("Over Budget");
+            
+        }
